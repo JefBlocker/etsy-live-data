@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Etsy Whiskey</title>
+  <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css">
+  <link rel="stylesheet" type="css/text" href="css/main.css">
+</head>
+<body>
+<div id="page">
+  <header>
+    
+      <p id="logo">Etsy</p>
+    
+    
+    <div class="searchBox">
+      <form>
+      <input type="text" placeholder="whiskey" name="searchBox" class="search"required>
+      <input type="button" value="Search" class="button">
+      </form>
+    </div>
+    
+    <div class="signIn">
+           <ul>
+        <li><a href="#">Sell on Etsy</a></li>
+        <li><a href="#">Register</a></li>
+        <li id="signIn"><a href="#">Sign in</a></li>
+        <li id="cart">
+          <a href="#">
+            <figure>
+              <img src="images/cart.png">
+              <figcaption>Cart
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Clothing &amp; Accessories</a></li>
+        <li><a href="#">Jewelry</a></li>
+        <li><a href="#">Craft Supplies &amp; Tools</a></li>
+        <li><a href="#">Weddings</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Home &amp; Living</a></li>
+        <li><a href="#">Kids &amp; Baby</a></li>
+        <li><a href="#">Vintage</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="content">
+    
+      <div id="wrapper1">
+        <aside id="aside1">
+          <p>Show results for:</p>
+        </aside>
+
+        <aside id="aside2">
+            <h4>All Categories</h4>
+              <ul id="categoryLinks">
+                <li><a href="#">Home &amp; Living</a></li>
+                <li><a href="#">Art &amp; Collectibles</a></li>
+                <li><a href="#">Weddings</a></li>
+                <li><a href="#">Clothing</a></li>        
+                <li><a href="#">Jewelry</a></li>
+                <li><a href="#">Jewelry</a></li>
+                <li><a href="#">Paper &amp; Party Supplies</a></li>
+                <li><a href="#">Accessories</a></li>        
+                <li><a href="#">Craft Supplies &amp; Tools</a></li>
+                <li><a href="#">Bags &amp; Purses</a></li>
+                <li><a href="#">Bath &amp; Beauty</a></li> 
+                <li><a href="#">Shoes</a></li> 
+                <li><a href="#">Books, Movies &amp; Music</a></li> 
+                <li><a href="#">Electronic &amp; Accessories</a></li> 
+                <li><a href="#">Toys &amp; Games</a></li> 
+                <li><a href="#">Pet Supplies</a></li>        
+              </ul>     
+        </aside>
+
+        <aside id="aside3">
+          <p>Refine your search</p>    
+        </aside>
+
+        <aside id="aside4">
+           <b>Item Type</b><br>
+      <form action="#">
+      <input type="radio" name="type" value="All Items" checked="checked"/> All Items<br>
+      <input type="radio" name="type" value="Handmade" /> <a href="#">Handmade</a><br>
+      <input type="radio" name="type" value="Vintage" /> <a href="#">Vintage</a><br>
+      </form>
+      <hr>
+      <b>Price</b>
+      <form action="#">
+      <input type="text" name="low" size="10" maxlength="30" placeholder="$ Low" /> to 
+       <input type="text" name="high" size="10" maxlength="30" placeholder="$ High" /> 
+       <button>&GT;</button>
+      <hr>
+      <b>Filter by Color</b>
+        <ul id="swatches">
+          <li id="red"></li>
+          <li id="orange"></li>
+          <li id="yellow"></li>
+          <li id="green"></li>
+          <li id="blue"></li>
+          <li id="lavender"></li>
+          <li id="black"></li>
+          <li id="white"></li>
+        </ul>
+      <hr>
+      <b>Ordering Options</b>
+      <br>
+      <form action="#">
+      <input type="checkbox" name="Ordering Options" value="Accepts Etsy Gift Cards" /> <a href="#">Accepts Etsy Gift Cards</a><br>
+      <input type="checkbox" name="Ordering Options" value="Customizable" /> <a href="#">Customizable</a>
+      </form>
+      <hr>
+      <b>Shop Location</b>
+      <form action="#">
+        <input type="radio" name="type" value="Anywhere" checked="checked"/> Anywhere<br>
+       <input type="radio" name="type" value="United States" /> <a href="#">United States</a><br>
+      </form>
+      <a href="#">Choose a customer location</a>
+      <hr>
+      <b>Ship To</b><br>
+      <form action="#">
+      <select name="United States">
+      <option value="Australia">Australia
+      </option>
+      <option value="Canada">Canada
+      </option>
+      <option value="United States" selected="selected">United States
+      </option>
+      </select>
+      </form>
+      <br>
+        </aside>
+
+        <!--<aside id="aside5">
+    
+        </aside>-->
+      </div>
+
+      <div id="wrapper2">
+        <article id="allCategories">
+        <p><a href="#">All categories</a> &gt; <b>"whiskey"</b> (25,590 Results)</p>
+      
+        </article>
+        
+        <article class="container">
+          <script type="text/template" id="item-template">
+            <div class="item">
+              <a href="<%= shop_section_id.url %>">
+              <img src="<%= Images[0].url_570xN %>" id="img">
+              <div id="itemLine1">
+              <%= title %>...title
+              </a>
+              </div>
+              <div id="itemLine2">  
+                <p><a href="#"><%= Shop.shop_name %></a>
+                <span>$<%= price %> 
+                <%= currency_code %></span></p> 
+              </div>
+            </div>
+          </script>
+        </article>
+        
+        <article id="relatedTo">
+          <div>
+        <P>Related to <b>whiskey</b></P>
+        <ul id="relatedLinks">
+          <li><a href="#">whiskey barrel</a></li>
+          <li><a href="#">whiskey decanter</a></li>
+          <li><a href="#">whiskey stones</a></li>
+          <li><a href="#">jack daniels</a></li>        
+          <li><a href="#">bourbon</a></li>
+          <li><a href="#">scotch</a></li>
+          <li><a href="#">whiskey bottle</a></li>
+          <li><a href="#">beer</a></li>        
+          <li><a href="#">cigar</a></li>
+          <li><a href="#">flask</a></li>       
+        </ul>             
+      </div>
+      <p class="lookingForShops">Looking for shops? 
+        <a href="#">whiskeynweddingbells</a>, 
+        <a href="#">WhiskeyDogWares</a>, 
+        <a href="#">WhiskeyWhims</a>. 
+        <a href="#">See more</a>.
+      </p>
+      <div class="bottomButtons">
+        <button class="disabled"><a href="#">&lt;</a></button>
+        <button class="current"><a href="#">1</a></button>
+        <button><a href="#">2</a></button>
+        <button><a href="#">3</a></button>
+        <button><a href="#">4</a></button>
+        <button><a href="#">5</a></button>
+        <button><a href="#">6</a></button>
+        <button><a href="#">7</a></button>
+        <button><a href="#">8</a></button>
+        <button><a href="#">9</a></button>
+        <button class="disabled"><a href="#">...</a></button>
+        <button><a href="#">250</a></button>
+        <button><a href="#">&gt;</a></button>
+      </div>
+        </article>
+      </div>
+  </div>
+
+  <footer>
+  </footer>
+</div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
